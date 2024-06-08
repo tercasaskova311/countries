@@ -57,7 +57,7 @@ Explained Variance:
 The first two principal components explain a significant portion of the variance in the dataset, making them useful for understanding the overall structure of the data.
 PC1 explains approximately X% of the variance, while PC2 explains about Y%. Together, they capture a majority of the data's variability.
 
-![Image Alt Text](biplot_PC1_PC2.png)
+![Image Alt Text](all.countries_dif.components_scatter.png)
 
 ![Image Alt Text](scatter_,matrix.png)
 
