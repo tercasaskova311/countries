@@ -56,7 +56,9 @@ Shows the explained variance by each principal component, highlighting the impor
 
 ### Biplot: 
 Displays countries in the space of the first two principal components, with arrows representing the original variables' contribution to these components.
-![Image Alt Text](https://path-to-your-image-url)
+![Image Alt Text](biplot_PC1_PC2.png)
+![Image Alt Text](biplot_PC3_PC4png.png)
+
 
 ### Cluster Plot: 
 Visualizes clusters of countries based on their socio-economic and health profiles.
