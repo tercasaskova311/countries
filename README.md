@@ -28,8 +28,6 @@ This dataset comprises various socio-economic and health-related indicators for 
 
    - Missing values were checked and the overall structure of the data was reviewed. Remove temporal variables (not used in PCA) = Dataframe df for analysis using PCA (Matrix scatter plot)
 
-     ![Image Alt Text](all.countries_dif.components_scatter.png)
-
      ![Image Alt Text](matrix.png)
 
 
