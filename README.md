@@ -49,7 +49,12 @@ Plot the loads but using a compact form
 4. **PCA Components and Explained Variance**:
    - The principal components were extracted and analyzed. 
    - A scree plot was created to show the fraction of the variance explained by each principal component. This helps to determine the number of components to retain.
+  
+![Image Alt Text](scree.plot.png)
+
    - The cumulative explained variance was plotted to show how much variance is explained as more components are included.
+
+![Image Alt Text](cum_var_ratio.png)
 
 Key Insights from Principal Component Analysis (PCA)
 ## Objective: Reduce the dimensionality of the dataset while retaining most of the variation in the data.
