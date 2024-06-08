@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -11,10 +5,6 @@ from matplotlib import pyplot as plt
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler 
 from sklearn.decomposition import PCA
-
-
-# In[3]:
-
 
 # Read the data from the file
 # Data from https://www.kaggle.com/rohan0301/unsupervised-learning-on-country-data?select=Country-data.csv 
@@ -24,27 +14,11 @@ dfEURJPY= pd.read_csv('/Users/terezasaskova/Downloads/4/practiceCode4_Part1/Data
 dfUSDCHF= pd.read_csv('/Users/terezasaskova/Downloads/4/practiceCode4_Part2/Data_P4_USDCHF-2000-2020-15m.csv', nrows=50000) 
 dfUSDJPY= pd.read_csv('/Users/terezasaskova/Downloads/4/practiceCode4_Part2/Data_P4_USDJPY-2000-2020-15m.csv', nrows=50000)
 
-
-# In[4]:
-
-
 dfEURUSD.head()
-
-
-# In[5]:
-
 
 dfEURUSD.shape
 
-
-# In[6]:
-
-
 dfEURUSD.dtypes
-
-
-# In[7]:
-
 
 #the right dataframe (remove IDs add YEAR and MONTH, and make sure that columns have the right type)
 df_all=pd.DataFrame()
@@ -61,34 +35,19 @@ df_all['USDJPY']=dfUSDJPY.CLOSE
 # quick view of the new dataframe
 df_all
 
-
-# In[8]:
-
-
 #Part 2: DATA EXPLORATION
 
 # 1.the summary of the numerical columns
 
 df_all.describe()
 
-
-# In[9]:
-
-
 # temporal evolution of EURUSD and EURCHF
-
-
-# In[10]:
-
 
 print(df_all.head())
 
 print(df_all.isna().sum())
 
 print(df_all.describe())
-
-
-# In[11]:
 
 
 fig = plt.figure(figsize=(15,4))
@@ -101,10 +60,6 @@ plt.ylim(min(df_all['EURUSD'].min(), df_all['EURCHF'].min()), max(df_all['EURUSD
 
 plt.show()
 
-
-# In[13]:
-
-
 #  Filter data to set the final problem
 
 first_year = 2000
@@ -115,25 +70,14 @@ rows_sel =((df_all.YEAR >= first_year) & (df_all.YEAR <= last_year)) &((df_all.M
 
 df = df_all.loc[rows_sel].copy()
 
-
-# In[14]:
-
-
 # finally remove temporal variables (not used in PCA)
 
 df = df.drop(['DATETIME', 'YEAR', 'MONTH'], axis = 1)
 
 
-# In[15]:
-
-
 print('Dataframe df for analysis using PCA: ')
 
 df
-
-
-# In[20]:
-
 
 # Matrix scatter plot
 
@@ -141,46 +85,25 @@ fig = pd.plotting.scatter_matrix(df, diagonal='kde', figsize=(15,10));
 fig.show()
 
 
-# In[18]:
-
-
 # Let us explore the correlation matrix
 
 corrMatrix = df.corr()
 print (corrMatrix)
-
-
-# In[21]:
-
 
 sns.heatmap(corrMatrix, annot=True) 
 
 plt.show()
 
 
-# In[22]:
-
-
 # Mean of each variable
 
 df.mean(axis=0)
-
-
-# In[23]:
-
 
 # Standard deviation of each variable
 
 df.std(axis=0)
 
-
-# In[24]:
-
-
 #PCA main part of the analysis is one of those tools that do not imply pairs (X,y), but only a collection of {x}.
-
-
-# In[33]:
 
 
 import pandas as pd
@@ -201,9 +124,6 @@ pca_pipe.fit(X)
 model = pca_pipe.named_steps['pca']
 
 
-# In[34]:
-
-
 # Ensure the model is fitted before accessing components_
 
 if hasattr(model, 'components_'):
@@ -218,25 +138,13 @@ if hasattr(model, 'components_'):
 else:
     print("The PCA model has no attribute 'components_'")
 
-
-# In[35]:
-
-
 # plot the loads defining each principal component
 
 df_comp.T.plot.bar(figsize=(8, 9), subplots=True, rot = 0, legend = False,color = 'black');
 
-
-# In[36]:
-
-
 # plot the loads but using a compact form
 
 sns.heatmap(df_comp, cmap='Spectral');
-
-
-# In[38]:
-
 
 # biplot PC1 and PC2
 
@@ -249,10 +157,6 @@ ax.set_ylabel('PC2');
 
 plt.show()
 
-
-# In[39]:
-
-
 # biplot PC3 and PC4
 
 fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(6, 4)) 
@@ -263,10 +167,6 @@ ax.set_xlabel('PC3');
 ax.set_ylabel('PC4');
 
 plt.show()
-
-
-# In[40]:
-
 
 # plot the screeplot (Fraction of the explained variance)
 
@@ -291,10 +191,6 @@ ax.set_ylim(0, 0.7)
 ax.set_title('Fraction of the variance explained by each projection')
 ax.set_xlabel('No of principal components')
 ax.set_ylabel('Fraction');
-
-
-# In[42]:
-
 
 # Cumulated variance
 
@@ -323,9 +219,6 @@ ax.set_xlabel('No of principal components')
 ax.set_ylabel('Fraction');
 
 
-# In[43]:
-
-
 # Let us now project all countries in the different components
 
 scaler = StandardScaler()
@@ -334,19 +227,11 @@ Xnorm = scaler.transform(X)
 Xnew = model.fit_transform(Xnorm)
 
 
-# In[44]:
-
-
 # Let us explore PCA1-PCA2
 
 fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(15, 12))
 axs.scatter(Xnew[:,0],Xnew[:,1])
 axs.set_xlabel('PC1')
 axs.set_ylabel('PC2')
-
-
-# In[ ]:
-
-
 
 
