@@ -1,7 +1,9 @@
-### PCA Analysis: socio-economic and health-related indicators for multiple countries
+# PCA Analysis: socio-economic and health-related indicators for multiple countries
+
 Dataset Overview
 
 This dataset comprises various socio-economic and health-related indicators for multiple countries. The columns included are:
+
 - country: Name of the country
 - child_mort: Death of children under 5 years of age per 1000 live births
 - exports: Exports of goods and services per capita as a percentage of GDP per capita
@@ -50,9 +52,11 @@ PC1 explains approximately X% of the variance, while PC2 explains about Y%. Toge
 
 ### Scree Plot: 
 Shows the explained variance by each principal component, highlighting the importance of the first few components.
+![Image Alt Text](https://path-to-your-image-url)
 
 ### Biplot: 
 Displays countries in the space of the first two principal components, with arrows representing the original variables' contribution to these components.
+![Image Alt Text](https://path-to-your-image-url)
 
 ### Cluster Plot: 
 Visualizes clusters of countries based on their socio-economic and health profiles.
