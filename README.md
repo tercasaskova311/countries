@@ -23,6 +23,8 @@ This dataset comprises various socio-economic and health-related indicators for 
 2. **Exploratory Data Analysis (EDA)**:
    - Summary statistics for the numerical columns were generated.
    - Visualizations for the temporal evolution of EURUSD and EURCHF were created, showing their trends over time.
+     ![Image Alt Text](https://path-to-your-image-url)
+
    - Missing values were checked and the overall structure of the data was reviewed.
 ----------
 3. **Principal Component Analysis (PCA)**:
@@ -48,6 +50,8 @@ Explained Variance:
 The first two principal components explain a significant portion of the variance in the dataset, making them useful for understanding the overall structure of the data.
 PC1 explains approximately X% of the variance, while PC2 explains about Y%. Together, they capture a majority of the data's variability.
 
+![Image Alt Text](scatter_,matrix.png)
+
 ### Visualizations:
 
 ### Scree Plot: 
@@ -71,6 +75,7 @@ Country Clustering:
 Using the principal components, countries can be visualized in a lower-dimensional space, revealing clusters of similar socio-economic and health profiles.
 Developed countries tend to cluster in regions of high PC1 and PC2 values, indicating high income, better health outcomes, and higher life expectancy.
 Developing countries are spread out with varying profiles but often have lower PC1 and PC2 values, indicating lower income and health metrics.
+
 
 -----
 ### Conclusion:
