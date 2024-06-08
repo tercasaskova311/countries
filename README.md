@@ -41,18 +41,23 @@ This dataset comprises various socio-economic and health-related indicators for 
    - The cumulative explained variance was plotted to show how much variance is explained as more components are included.
 
 Key Insights from Principal Component Analysis (PCA)
-Objective: Reduce the dimensionality of the dataset while retaining most of the variation in the data.
+## Objective: Reduce the dimensionality of the dataset while retaining most of the variation in the data.
 Method: Standardized the data and applied PCA to identify the principal components.
 
 Principal Components:
 
 PC1: This component captures the largest variance in the dataset. It is heavily influenced by indicators such as Income, exports, and gdpp. High values in PC1 generally indicate countries with higher income, higher exports, and higher GDP per capita.
+
 PC2: This component captures the second largest variance and is influenced by life_expec and health. Higher values in PC2 are associated with better health outcomes and higher life expectancy.
+
 PC3: This component shows variation influenced by Inflation and imports. High values in PC3 may indicate economies with higher inflation and import rates.
+
 Explained Variance:
 
 The first two principal components explain a significant portion of the variance in the dataset, making them useful for understanding the overall structure of the data.
 PC1 explains approximately X% of the variance, while PC2 explains about Y%. Together, they capture a majority of the data's variability.
+
+![Image Alt Text](biplot_PC1_PC2.png)
 
 ![Image Alt Text](scatter_,matrix.png)
 
