@@ -56,7 +56,11 @@ Shows the explained variance by each principal component, highlighting the impor
 
 ### Biplot: 
 Displays countries in the space of the first two principal components, with arrows representing the original variables' contribution to these components.
+
+PC1, PC2
 ![Image Alt Text](biplot_PC1_PC2.png)
+
+PC3, PC4
 ![Image Alt Text](biplot_PC3_PC4png.png)
 
 
