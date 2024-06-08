@@ -73,7 +73,6 @@ PC1 explains approximately X% of the variance, while PC2 explains about Y%. Toge
 
 ![Image Alt Text](all.countries_dif.components_scatter.png)
 
-![Image Alt Text](scatter_,matrix.png)
 
 ### Visualizations:
 
