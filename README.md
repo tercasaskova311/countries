@@ -71,6 +71,7 @@ Country Clustering:
 Using the principal components, countries can be visualized in a lower-dimensional space, revealing clusters of similar socio-economic and health profiles.
 Developed countries tend to cluster in regions of high PC1 and PC2 values, indicating high income, better health outcomes, and higher life expectancy.
 Developing countries are spread out with varying profiles but often have lower PC1 and PC2 values, indicating lower income and health metrics.
+
 -----
 ### Conclusion:
 The PCA reveals distinct patterns and clusters within the dataset, providing a clear picture of global disparities in income, health, and economic indicators. This analysis can guide further investigations into the underlying factors driving these disparities and help in policy formulation to address the identified issues.
