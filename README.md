@@ -26,14 +26,25 @@ This dataset comprises various socio-economic and health-related indicators for 
 
      ![Image Alt Text](evolution_EURUSDxEURCHF_plot.png)
 
-   - Missing values were checked and the overall structure of the data was reviewed.
+   - Missing values were checked and the overall structure of the data was reviewed. Remove temporal variables (not used in PCA) = Dataframe df for analysis using PCA (Matrix scatter plot)
+
+     ![Image Alt Text](all.countries_dif.components_scatter.png)
+
+     ![Image Alt Text](matrix.png)
+
+
+
 ----------
 3. **Principal Component Analysis (PCA)**:
-   - The data was standardized using `StandardScaler` to ensure all variables contribute equally to the analysis.
-   - PCA was performed to reduce the dimensionality of the data and identify the principal components.
+   - PCA was performed to reduce the dimensionality of the data and identify the principal components:
 
-![Image Alt Text](https://path-to-your-image-url)
+Plot the loads defining each principal component
 
+![Image Alt Text](T.plot.bar.png)
+
+Plot the loads but using a compact form
+
+![Image Alt Text](heat.map_compact.png)
 
 4. **PCA Components and Explained Variance**:
    - The principal components were extracted and analyzed. 
